@@ -140,5 +140,95 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  section[id] {
+    scroll-margin-top: 4rem;
+  }
+}
+
+/* ---------- EFICEM brand identity (4 colors only) ---------- */
+@theme {
+  --color-ink: #050505;
+  --color-graphite: #151719;
+  --color-lime: #65d91f;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-sport: "Oswald", "Space Grotesk", ui-sans-serif, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+  --background: #050505;
+  --foreground: #ffffff;
+  --card: #151719;
+  --card-foreground: #ffffff;
+  --popover: #151719;
+  --popover-foreground: #ffffff;
+  --primary: #65d91f;
+  --primary-foreground: #050505;
+  --secondary: #151719;
+  --secondary-foreground: #ffffff;
+  --muted: #151719;
+  --muted-foreground: rgb(255 255 255 / 70%);
+  --accent: #151719;
+  --accent-foreground: #ffffff;
+  --border: rgb(255 255 255 / 12%);
+  --input: rgb(255 255 255 / 15%);
+  --ring: #65d91f;
+}
+
+.tech-grid {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 5%) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 5%) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+@keyframes eficem-rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes eficem-slide {
+  from {
+    opacity: 0;
+    transform: translateX(48px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-rise {
+  opacity: 0;
+  animation: eficem-rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-slide-in {
+  opacity: 0;
+  animation: eficem-slide 1.1s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-rise,
+  .animate-slide-in {
+    opacity: 1;
+    animation: none;
   }
 }
