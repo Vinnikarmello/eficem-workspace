@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Hero } from "@/components/site/Hero";
 import { SponsorsStrip } from "@/components/site/SponsorsStrip";
+import { ProjectSection } from "@/components/site/ProjectSection";
+import { TeamSection } from "@/components/site/TeamSection";
 
 // No head() here: the home route inherits title/description/og/twitter from
 // __root.tsx, and ships no og:image so serve-time hosting can inject the
@@ -17,7 +19,9 @@ function Index() {
       <main>
         <Hero />
         <SponsorsStrip />
-        {/* Next stages: #projeto, #equipe, #conquistas, #na-pratica, #contato */}
+        <ProjectSection />
+        <TeamSection />
+        {/* Next stages: #conquistas, #na-pratica, #contato */}
       </main>
     </div>
   );
