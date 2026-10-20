@@ -4,6 +4,8 @@ import { Hero } from "@/components/site/Hero";
 import { SponsorsStrip } from "@/components/site/SponsorsStrip";
 import { ProjectSection } from "@/components/site/ProjectSection";
 import { TeamSection } from "@/components/site/TeamSection";
+import { TimelineSection } from "@/components/site/TimelineSection";
+import { GallerySection } from "@/components/site/GallerySection";
 
 // No head() here: the home route inherits title/description/og/twitter from
 // __root.tsx, and ships no og:image so serve-time hosting can inject the
@@ -21,7 +23,9 @@ function Index() {
         <SponsorsStrip />
         <ProjectSection />
         <TeamSection />
-        {/* Next stages: #conquistas, #na-pratica, #contato */}
+        <TimelineSection />
+        <GallerySection />
+        {/* Next stages: #contato */}
       </main>
     </div>
   );
