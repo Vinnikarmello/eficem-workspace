@@ -6,6 +6,9 @@ import { ProjectSection } from "@/components/site/ProjectSection";
 import { TeamSection } from "@/components/site/TeamSection";
 import { TimelineSection } from "@/components/site/TimelineSection";
 import { GallerySection } from "@/components/site/GallerySection";
+import { SponsorsCta } from "@/components/site/SponsorsCta";
+import { ContactSection } from "@/components/site/ContactSection";
+import { Footer } from "@/components/site/Footer";
 
 // No head() here: the home route inherits title/description/og/twitter from
 // __root.tsx, and ships no og:image so serve-time hosting can inject the
@@ -25,8 +28,10 @@ function Index() {
         <TeamSection />
         <TimelineSection />
         <GallerySection />
-        {/* Next stages: #contato */}
+        <SponsorsCta />
+        <ContactSection />
       </main>
+      <Footer />
     </div>
   );
 }
